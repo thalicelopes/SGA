@@ -11,4 +11,11 @@
         Me.PROFESSORTableAdapter.Fill(Me.SGADataSet.PROFESSOR)
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim OFD As New OpenFileDialog
+        If OFD.ShowDialog = Windows.Forms.DialogResult.OK Then
+            FOTOPictureBox.ImageLocation = OFD.FileName
+        End If
+    End Sub
 End Class
