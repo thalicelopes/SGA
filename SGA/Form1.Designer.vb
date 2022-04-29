@@ -31,6 +31,7 @@ Partial Class Form1
         '
         'Button1
         '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Location = New System.Drawing.Point(146, 20)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(191, 54)
@@ -40,6 +41,7 @@ Partial Class Form1
         '
         'Button2
         '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Location = New System.Drawing.Point(146, 80)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(191, 54)
@@ -49,6 +51,7 @@ Partial Class Form1
         '
         'Button3
         '
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.Location = New System.Drawing.Point(146, 140)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(191, 54)
@@ -58,6 +61,7 @@ Partial Class Form1
         '
         'Button4
         '
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button4.Location = New System.Drawing.Point(146, 200)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(191, 54)
@@ -67,6 +71,7 @@ Partial Class Form1
         '
         'Button5
         '
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button5.Location = New System.Drawing.Point(146, 260)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(191, 54)

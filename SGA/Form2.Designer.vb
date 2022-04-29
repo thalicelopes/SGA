@@ -58,6 +58,7 @@ Partial Class Form2
         Me.OBSTextBox = New System.Windows.Forms.TextBox()
         Me.FOTOPictureBox = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         MATRICULALabel = New System.Windows.Forms.Label()
         NOMELabel = New System.Windows.Forms.Label()
         SOBRENOMELabel = New System.Windows.Forms.Label()
@@ -239,6 +240,7 @@ Partial Class Form2
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Posição"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -357,11 +359,22 @@ Partial Class Form2
         Me.Button1.Text = "Inserir..."
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(356, 279)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(109, 13)
+        Me.LinkLabel1.TabIndex = 18
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Voltar a Página Inicial"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(477, 301)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(MATRICULALabel)
         Me.Controls.Add(Me.MATRICULATextBox)
@@ -419,4 +432,5 @@ Partial Class Form2
     Friend WithEvents OBSTextBox As TextBox
     Friend WithEvents FOTOPictureBox As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

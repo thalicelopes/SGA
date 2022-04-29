@@ -24,6 +24,17 @@
         Dim linha As DataGridViewRow
         Dim media As Double
         Dim cont As Integer
+        For Each linha In MATRICULADataGridView.Rows
+            media = media + linha.Cells(3).Value
+            cont = cont + 1
+        Next
+        cont = cont - 1
+        media = media / cont
+        MEDIATextBox.Text = media
+    End Sub
 
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Me.Hide()
+        Form1.Show()
     End Sub
 End Class

@@ -23,7 +23,6 @@ Partial Class Form5
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
         Dim CODIGOLabel As System.Windows.Forms.Label
         Dim PROFESSORLabel As System.Windows.Forms.Label
         Dim CURSOLabel As System.Windows.Forms.Label
@@ -32,45 +31,47 @@ Partial Class Form5
         Dim DTFIMLabel As System.Windows.Forms.Label
         Dim OBSLabel As System.Windows.Forms.Label
         Dim MEDIALabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
         Me.SGADataSet = New SGA.SGADataSet()
         Me.TURMABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TURMATableAdapter = New SGA.SGADataSetTableAdapters.TURMATableAdapter()
         Me.TableAdapterManager = New SGA.SGADataSetTableAdapters.TableAdapterManager()
+        Me.ALUNOTableAdapter = New SGA.SGADataSetTableAdapters.ALUNOTableAdapter()
+        Me.CURSOTableAdapter = New SGA.SGADataSetTableAdapters.CURSOTableAdapter()
+        Me.MATRICULATableAdapter = New SGA.SGADataSetTableAdapters.MATRICULATableAdapter()
+        Me.PROFESSORTableAdapter = New SGA.SGADataSetTableAdapters.PROFESSORTableAdapter()
         Me.TURMABindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.TURMABindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.CODIGOTextBox = New System.Windows.Forms.TextBox()
         Me.PROFESSORComboBox = New System.Windows.Forms.ComboBox()
+        Me.PROFESSORBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CURSOComboBox = New System.Windows.Forms.ComboBox()
+        Me.CURSOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CAPACIDADETextBox = New System.Windows.Forms.TextBox()
         Me.DTINICIODateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.DTFIMDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.OBSTextBox = New System.Windows.Forms.TextBox()
-        Me.PROFESSORBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PROFESSORTableAdapter = New SGA.SGADataSetTableAdapters.PROFESSORTableAdapter()
-        Me.CURSOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CURSOTableAdapter = New SGA.SGADataSetTableAdapters.CURSOTableAdapter()
         Me.MATRICULABindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MATRICULATableAdapter = New SGA.SGADataSetTableAdapters.MATRICULATableAdapter()
         Me.MATRICULADataGridView = New System.Windows.Forms.DataGridView()
-        Me.ALUNOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ALUNOTableAdapter = New SGA.SGADataSetTableAdapters.ALUNOTableAdapter()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.ALUNOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MEDIATextBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         CODIGOLabel = New System.Windows.Forms.Label()
         PROFESSORLabel = New System.Windows.Forms.Label()
         CURSOLabel = New System.Windows.Forms.Label()
@@ -89,6 +90,78 @@ Partial Class Form5
         CType(Me.MATRICULADataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ALUNOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'CODIGOLabel
+        '
+        CODIGOLabel.AutoSize = True
+        CODIGOLabel.Location = New System.Drawing.Point(62, 53)
+        CODIGOLabel.Name = "CODIGOLabel"
+        CODIGOLabel.Size = New System.Drawing.Size(52, 13)
+        CODIGOLabel.TabIndex = 1
+        CODIGOLabel.Text = "CODIGO:"
+        '
+        'PROFESSORLabel
+        '
+        PROFESSORLabel.AutoSize = True
+        PROFESSORLabel.Location = New System.Drawing.Point(62, 79)
+        PROFESSORLabel.Name = "PROFESSORLabel"
+        PROFESSORLabel.Size = New System.Drawing.Size(76, 13)
+        PROFESSORLabel.TabIndex = 3
+        PROFESSORLabel.Text = "PROFESSOR:"
+        '
+        'CURSOLabel
+        '
+        CURSOLabel.AutoSize = True
+        CURSOLabel.Location = New System.Drawing.Point(62, 106)
+        CURSOLabel.Name = "CURSOLabel"
+        CURSOLabel.Size = New System.Drawing.Size(48, 13)
+        CURSOLabel.TabIndex = 5
+        CURSOLabel.Text = "CURSO:"
+        '
+        'CAPACIDADELabel
+        '
+        CAPACIDADELabel.AutoSize = True
+        CAPACIDADELabel.Location = New System.Drawing.Point(62, 133)
+        CAPACIDADELabel.Name = "CAPACIDADELabel"
+        CAPACIDADELabel.Size = New System.Drawing.Size(78, 13)
+        CAPACIDADELabel.TabIndex = 7
+        CAPACIDADELabel.Text = "CAPACIDADE:"
+        '
+        'DTINICIOLabel
+        '
+        DTINICIOLabel.AutoSize = True
+        DTINICIOLabel.Location = New System.Drawing.Point(62, 160)
+        DTINICIOLabel.Name = "DTINICIOLabel"
+        DTINICIOLabel.Size = New System.Drawing.Size(57, 13)
+        DTINICIOLabel.TabIndex = 9
+        DTINICIOLabel.Text = "DTINICIO:"
+        '
+        'DTFIMLabel
+        '
+        DTFIMLabel.AutoSize = True
+        DTFIMLabel.Location = New System.Drawing.Point(62, 186)
+        DTFIMLabel.Name = "DTFIMLabel"
+        DTFIMLabel.Size = New System.Drawing.Size(43, 13)
+        DTFIMLabel.TabIndex = 11
+        DTFIMLabel.Text = "DTFIM:"
+        '
+        'OBSLabel
+        '
+        OBSLabel.AutoSize = True
+        OBSLabel.Location = New System.Drawing.Point(62, 211)
+        OBSLabel.Name = "OBSLabel"
+        OBSLabel.Size = New System.Drawing.Size(32, 13)
+        OBSLabel.TabIndex = 13
+        OBSLabel.Text = "OBS:"
+        '
+        'MEDIALabel
+        '
+        MEDIALabel.AutoSize = True
+        MEDIALabel.Location = New System.Drawing.Point(126, 517)
+        MEDIALabel.Name = "MEDIALabel"
+        MEDIALabel.Size = New System.Drawing.Size(44, 13)
+        MEDIALabel.TabIndex = 16
+        MEDIALabel.Text = "MEDIA:"
         '
         'SGADataSet
         '
@@ -114,6 +187,22 @@ Partial Class Form5
         Me.TableAdapterManager.TURMATableAdapter = Me.TURMATableAdapter
         Me.TableAdapterManager.UpdateOrder = SGA.SGADataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'ALUNOTableAdapter
+        '
+        Me.ALUNOTableAdapter.ClearBeforeFill = True
+        '
+        'CURSOTableAdapter
+        '
+        Me.CURSOTableAdapter.ClearBeforeFill = True
+        '
+        'MATRICULATableAdapter
+        '
+        Me.MATRICULATableAdapter.ClearBeforeFill = True
+        '
+        'PROFESSORTableAdapter
+        '
+        Me.PROFESSORTableAdapter.ClearBeforeFill = True
+        '
         'TURMABindingNavigator
         '
         Me.TURMABindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -131,6 +220,31 @@ Partial Class Form5
         Me.TURMABindingNavigator.Size = New System.Drawing.Size(424, 25)
         Me.TURMABindingNavigator.TabIndex = 0
         Me.TURMABindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Adicionar novo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de itens"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Excluir"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -159,22 +273,16 @@ Partial Class Form5
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Posição"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posição atual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 15)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de itens"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -182,7 +290,7 @@ Partial Class Form5
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Mover próximo"
         '
         'BindingNavigatorMoveLastItem
@@ -191,48 +299,21 @@ Partial Class Form5
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Adicionar novo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Excluir"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'TURMABindingNavigatorSaveItem
         '
         Me.TURMABindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.TURMABindingNavigatorSaveItem.Image = CType(resources.GetObject("TURMABindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.TURMABindingNavigatorSaveItem.Name = "TURMABindingNavigatorSaveItem"
-        Me.TURMABindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.TURMABindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.TURMABindingNavigatorSaveItem.Text = "Salvar Dados"
-        '
-        'CODIGOLabel
-        '
-        CODIGOLabel.AutoSize = True
-        CODIGOLabel.Location = New System.Drawing.Point(62, 53)
-        CODIGOLabel.Name = "CODIGOLabel"
-        CODIGOLabel.Size = New System.Drawing.Size(52, 13)
-        CODIGOLabel.TabIndex = 1
-        CODIGOLabel.Text = "CODIGO:"
         '
         'CODIGOTextBox
         '
@@ -241,15 +322,6 @@ Partial Class Form5
         Me.CODIGOTextBox.Name = "CODIGOTextBox"
         Me.CODIGOTextBox.Size = New System.Drawing.Size(200, 20)
         Me.CODIGOTextBox.TabIndex = 2
-        '
-        'PROFESSORLabel
-        '
-        PROFESSORLabel.AutoSize = True
-        PROFESSORLabel.Location = New System.Drawing.Point(62, 79)
-        PROFESSORLabel.Name = "PROFESSORLabel"
-        PROFESSORLabel.Size = New System.Drawing.Size(76, 13)
-        PROFESSORLabel.TabIndex = 3
-        PROFESSORLabel.Text = "PROFESSOR:"
         '
         'PROFESSORComboBox
         '
@@ -261,15 +333,12 @@ Partial Class Form5
         Me.PROFESSORComboBox.Name = "PROFESSORComboBox"
         Me.PROFESSORComboBox.Size = New System.Drawing.Size(200, 21)
         Me.PROFESSORComboBox.TabIndex = 4
+        Me.PROFESSORComboBox.ValueMember = "NOME"
         '
-        'CURSOLabel
+        'PROFESSORBindingSource
         '
-        CURSOLabel.AutoSize = True
-        CURSOLabel.Location = New System.Drawing.Point(62, 106)
-        CURSOLabel.Name = "CURSOLabel"
-        CURSOLabel.Size = New System.Drawing.Size(48, 13)
-        CURSOLabel.TabIndex = 5
-        CURSOLabel.Text = "CURSO:"
+        Me.PROFESSORBindingSource.DataMember = "PROFESSOR"
+        Me.PROFESSORBindingSource.DataSource = Me.SGADataSet
         '
         'CURSOComboBox
         '
@@ -281,15 +350,12 @@ Partial Class Form5
         Me.CURSOComboBox.Name = "CURSOComboBox"
         Me.CURSOComboBox.Size = New System.Drawing.Size(200, 21)
         Me.CURSOComboBox.TabIndex = 6
+        Me.CURSOComboBox.ValueMember = "NOME"
         '
-        'CAPACIDADELabel
+        'CURSOBindingSource
         '
-        CAPACIDADELabel.AutoSize = True
-        CAPACIDADELabel.Location = New System.Drawing.Point(62, 133)
-        CAPACIDADELabel.Name = "CAPACIDADELabel"
-        CAPACIDADELabel.Size = New System.Drawing.Size(78, 13)
-        CAPACIDADELabel.TabIndex = 7
-        CAPACIDADELabel.Text = "CAPACIDADE:"
+        Me.CURSOBindingSource.DataMember = "CURSO"
+        Me.CURSOBindingSource.DataSource = Me.SGADataSet
         '
         'CAPACIDADETextBox
         '
@@ -299,15 +365,6 @@ Partial Class Form5
         Me.CAPACIDADETextBox.Size = New System.Drawing.Size(200, 20)
         Me.CAPACIDADETextBox.TabIndex = 8
         '
-        'DTINICIOLabel
-        '
-        DTINICIOLabel.AutoSize = True
-        DTINICIOLabel.Location = New System.Drawing.Point(62, 160)
-        DTINICIOLabel.Name = "DTINICIOLabel"
-        DTINICIOLabel.Size = New System.Drawing.Size(57, 13)
-        DTINICIOLabel.TabIndex = 9
-        DTINICIOLabel.Text = "DTINICIO:"
-        '
         'DTINICIODateTimePicker
         '
         Me.DTINICIODateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TURMABindingSource, "DTINICIO", True))
@@ -316,15 +373,6 @@ Partial Class Form5
         Me.DTINICIODateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.DTINICIODateTimePicker.TabIndex = 10
         '
-        'DTFIMLabel
-        '
-        DTFIMLabel.AutoSize = True
-        DTFIMLabel.Location = New System.Drawing.Point(62, 186)
-        DTFIMLabel.Name = "DTFIMLabel"
-        DTFIMLabel.Size = New System.Drawing.Size(43, 13)
-        DTFIMLabel.TabIndex = 11
-        DTFIMLabel.Text = "DTFIM:"
-        '
         'DTFIMDateTimePicker
         '
         Me.DTFIMDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.TURMABindingSource, "DTFIM", True))
@@ -332,15 +380,6 @@ Partial Class Form5
         Me.DTFIMDateTimePicker.Name = "DTFIMDateTimePicker"
         Me.DTFIMDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.DTFIMDateTimePicker.TabIndex = 12
-        '
-        'OBSLabel
-        '
-        OBSLabel.AutoSize = True
-        OBSLabel.Location = New System.Drawing.Point(62, 211)
-        OBSLabel.Name = "OBSLabel"
-        OBSLabel.Size = New System.Drawing.Size(32, 13)
-        OBSLabel.TabIndex = 13
-        OBSLabel.Text = "OBS:"
         '
         'OBSTextBox
         '
@@ -351,32 +390,10 @@ Partial Class Form5
         Me.OBSTextBox.Size = New System.Drawing.Size(200, 58)
         Me.OBSTextBox.TabIndex = 14
         '
-        'PROFESSORBindingSource
-        '
-        Me.PROFESSORBindingSource.DataMember = "PROFESSOR"
-        Me.PROFESSORBindingSource.DataSource = Me.SGADataSet
-        '
-        'PROFESSORTableAdapter
-        '
-        Me.PROFESSORTableAdapter.ClearBeforeFill = True
-        '
-        'CURSOBindingSource
-        '
-        Me.CURSOBindingSource.DataMember = "CURSO"
-        Me.CURSOBindingSource.DataSource = Me.SGADataSet
-        '
-        'CURSOTableAdapter
-        '
-        Me.CURSOTableAdapter.ClearBeforeFill = True
-        '
         'MATRICULABindingSource
         '
         Me.MATRICULABindingSource.DataMember = "TURMA_MATRICULA"
         Me.MATRICULABindingSource.DataSource = Me.TURMABindingSource
-        '
-        'MATRICULATableAdapter
-        '
-        Me.MATRICULATableAdapter.ClearBeforeFill = True
         '
         'MATRICULADataGridView
         '
@@ -388,15 +405,6 @@ Partial Class Form5
         Me.MATRICULADataGridView.Name = "MATRICULADataGridView"
         Me.MATRICULADataGridView.Size = New System.Drawing.Size(243, 220)
         Me.MATRICULADataGridView.TabIndex = 15
-        '
-        'ALUNOBindingSource
-        '
-        Me.ALUNOBindingSource.DataMember = "ALUNO"
-        Me.ALUNOBindingSource.DataSource = Me.SGADataSet
-        '
-        'ALUNOTableAdapter
-        '
-        Me.ALUNOTableAdapter.ClearBeforeFill = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -423,20 +431,16 @@ Partial Class Form5
         Me.DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
+        'ALUNOBindingSource
+        '
+        Me.ALUNOBindingSource.DataMember = "ALUNO"
+        Me.ALUNOBindingSource.DataSource = Me.SGADataSet
+        '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "NOTA"
         Me.DataGridViewTextBoxColumn4.HeaderText = "NOTA"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'MEDIALabel
-        '
-        MEDIALabel.AutoSize = True
-        MEDIALabel.Location = New System.Drawing.Point(126, 517)
-        MEDIALabel.Name = "MEDIALabel"
-        MEDIALabel.Size = New System.Drawing.Size(44, 13)
-        MEDIALabel.TabIndex = 16
-        MEDIALabel.Text = "MEDIA:"
         '
         'MEDIATextBox
         '
@@ -456,11 +460,22 @@ Partial Class Form5
         Me.Button1.Text = "Calcular"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(303, 576)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(109, 13)
+        Me.LinkLabel1.TabIndex = 19
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Voltar à Página Inicial"
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(424, 598)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(MEDIALabel)
         Me.Controls.Add(Me.MEDIATextBox)
@@ -536,4 +551,5 @@ Partial Class Form5
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents MEDIATextBox As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

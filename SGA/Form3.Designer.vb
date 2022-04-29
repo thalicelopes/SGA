@@ -23,7 +23,6 @@ Partial Class Form3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Dim MATRICULALabel As System.Windows.Forms.Label
         Dim NOMELabel As System.Windows.Forms.Label
         Dim SOBRENOMELabel As System.Windows.Forms.Label
@@ -31,22 +30,23 @@ Partial Class Form3
         Dim EMAILLabel As System.Windows.Forms.Label
         Dim OBSLabel As System.Windows.Forms.Label
         Dim FOTOLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Me.SGADataSet = New SGA.SGADataSet()
         Me.ALUNOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ALUNOTableAdapter = New SGA.SGADataSetTableAdapters.ALUNOTableAdapter()
         Me.TableAdapterManager = New SGA.SGADataSetTableAdapters.TableAdapterManager()
         Me.ALUNOBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ALUNOBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.MATRICULATextBox = New System.Windows.Forms.TextBox()
         Me.NOMETextBox = New System.Windows.Forms.TextBox()
@@ -56,6 +56,7 @@ Partial Class Form3
         Me.OBSTextBox = New System.Windows.Forms.TextBox()
         Me.FOTOPictureBox = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         MATRICULALabel = New System.Windows.Forms.Label()
         NOMELabel = New System.Windows.Forms.Label()
         SOBRENOMELabel = New System.Windows.Forms.Label()
@@ -69,6 +70,69 @@ Partial Class Form3
         Me.ALUNOBindingNavigator.SuspendLayout()
         CType(Me.FOTOPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'MATRICULALabel
+        '
+        MATRICULALabel.AutoSize = True
+        MATRICULALabel.Location = New System.Drawing.Point(27, 43)
+        MATRICULALabel.Name = "MATRICULALabel"
+        MATRICULALabel.Size = New System.Drawing.Size(72, 13)
+        MATRICULALabel.TabIndex = 1
+        MATRICULALabel.Text = "MATRICULA:"
+        '
+        'NOMELabel
+        '
+        NOMELabel.AutoSize = True
+        NOMELabel.Location = New System.Drawing.Point(27, 69)
+        NOMELabel.Name = "NOMELabel"
+        NOMELabel.Size = New System.Drawing.Size(42, 13)
+        NOMELabel.TabIndex = 3
+        NOMELabel.Text = "NOME:"
+        '
+        'SOBRENOMELabel
+        '
+        SOBRENOMELabel.AutoSize = True
+        SOBRENOMELabel.Location = New System.Drawing.Point(27, 95)
+        SOBRENOMELabel.Name = "SOBRENOMELabel"
+        SOBRENOMELabel.Size = New System.Drawing.Size(79, 13)
+        SOBRENOMELabel.TabIndex = 5
+        SOBRENOMELabel.Text = "SOBRENOME:"
+        '
+        'TELEFONELabel
+        '
+        TELEFONELabel.AutoSize = True
+        TELEFONELabel.Location = New System.Drawing.Point(27, 121)
+        TELEFONELabel.Name = "TELEFONELabel"
+        TELEFONELabel.Size = New System.Drawing.Size(66, 13)
+        TELEFONELabel.TabIndex = 7
+        TELEFONELabel.Text = "TELEFONE:"
+        '
+        'EMAILLabel
+        '
+        EMAILLabel.AutoSize = True
+        EMAILLabel.Location = New System.Drawing.Point(27, 147)
+        EMAILLabel.Name = "EMAILLabel"
+        EMAILLabel.Size = New System.Drawing.Size(42, 13)
+        EMAILLabel.TabIndex = 9
+        EMAILLabel.Text = "EMAIL:"
+        '
+        'OBSLabel
+        '
+        OBSLabel.AutoSize = True
+        OBSLabel.Location = New System.Drawing.Point(27, 173)
+        OBSLabel.Name = "OBSLabel"
+        OBSLabel.Size = New System.Drawing.Size(32, 13)
+        OBSLabel.TabIndex = 11
+        OBSLabel.Text = "OBS:"
+        '
+        'FOTOLabel
+        '
+        FOTOLabel.AutoSize = True
+        FOTOLabel.Location = New System.Drawing.Point(231, 43)
+        FOTOLabel.Name = "FOTOLabel"
+        FOTOLabel.Size = New System.Drawing.Size(39, 13)
+        FOTOLabel.TabIndex = 13
+        FOTOLabel.Text = "FOTO:"
         '
         'SGADataSet
         '
@@ -112,6 +176,31 @@ Partial Class Form3
         Me.ALUNOBindingNavigator.TabIndex = 0
         Me.ALUNOBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Adicionar novo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de itens"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Excluir"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -139,22 +228,16 @@ Partial Class Form3
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Posição"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posição atual"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 15)
-        Me.BindingNavigatorCountItem.Text = "de {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Número total de itens"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -162,7 +245,7 @@ Partial Class Form3
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Mover próximo"
         '
         'BindingNavigatorMoveLastItem
@@ -171,48 +254,21 @@ Partial Class Form3
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Adicionar novo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Excluir"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'ALUNOBindingNavigatorSaveItem
         '
         Me.ALUNOBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.ALUNOBindingNavigatorSaveItem.Image = CType(resources.GetObject("ALUNOBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.ALUNOBindingNavigatorSaveItem.Name = "ALUNOBindingNavigatorSaveItem"
-        Me.ALUNOBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.ALUNOBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ALUNOBindingNavigatorSaveItem.Text = "Salvar Dados"
-        '
-        'MATRICULALabel
-        '
-        MATRICULALabel.AutoSize = True
-        MATRICULALabel.Location = New System.Drawing.Point(27, 43)
-        MATRICULALabel.Name = "MATRICULALabel"
-        MATRICULALabel.Size = New System.Drawing.Size(72, 13)
-        MATRICULALabel.TabIndex = 1
-        MATRICULALabel.Text = "MATRICULA:"
         '
         'MATRICULATextBox
         '
@@ -222,15 +278,6 @@ Partial Class Form3
         Me.MATRICULATextBox.Size = New System.Drawing.Size(100, 20)
         Me.MATRICULATextBox.TabIndex = 2
         '
-        'NOMELabel
-        '
-        NOMELabel.AutoSize = True
-        NOMELabel.Location = New System.Drawing.Point(27, 69)
-        NOMELabel.Name = "NOMELabel"
-        NOMELabel.Size = New System.Drawing.Size(42, 13)
-        NOMELabel.TabIndex = 3
-        NOMELabel.Text = "NOME:"
-        '
         'NOMETextBox
         '
         Me.NOMETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ALUNOBindingSource, "NOME", True))
@@ -239,15 +286,6 @@ Partial Class Form3
         Me.NOMETextBox.Size = New System.Drawing.Size(100, 20)
         Me.NOMETextBox.TabIndex = 4
         '
-        'SOBRENOMELabel
-        '
-        SOBRENOMELabel.AutoSize = True
-        SOBRENOMELabel.Location = New System.Drawing.Point(27, 95)
-        SOBRENOMELabel.Name = "SOBRENOMELabel"
-        SOBRENOMELabel.Size = New System.Drawing.Size(79, 13)
-        SOBRENOMELabel.TabIndex = 5
-        SOBRENOMELabel.Text = "SOBRENOME:"
-        '
         'SOBRENOMETextBox
         '
         Me.SOBRENOMETextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ALUNOBindingSource, "SOBRENOME", True))
@@ -255,15 +293,6 @@ Partial Class Form3
         Me.SOBRENOMETextBox.Name = "SOBRENOMETextBox"
         Me.SOBRENOMETextBox.Size = New System.Drawing.Size(100, 20)
         Me.SOBRENOMETextBox.TabIndex = 6
-        '
-        'TELEFONELabel
-        '
-        TELEFONELabel.AutoSize = True
-        TELEFONELabel.Location = New System.Drawing.Point(27, 121)
-        TELEFONELabel.Name = "TELEFONELabel"
-        TELEFONELabel.Size = New System.Drawing.Size(66, 13)
-        TELEFONELabel.TabIndex = 7
-        TELEFONELabel.Text = "TELEFONE:"
         '
         'TELEFONEMaskedTextBox
         '
@@ -274,15 +303,6 @@ Partial Class Form3
         Me.TELEFONEMaskedTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TELEFONEMaskedTextBox.TabIndex = 8
         '
-        'EMAILLabel
-        '
-        EMAILLabel.AutoSize = True
-        EMAILLabel.Location = New System.Drawing.Point(27, 147)
-        EMAILLabel.Name = "EMAILLabel"
-        EMAILLabel.Size = New System.Drawing.Size(42, 13)
-        EMAILLabel.TabIndex = 9
-        EMAILLabel.Text = "EMAIL:"
-        '
         'EMAILTextBox
         '
         Me.EMAILTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ALUNOBindingSource, "EMAIL", True))
@@ -290,15 +310,6 @@ Partial Class Form3
         Me.EMAILTextBox.Name = "EMAILTextBox"
         Me.EMAILTextBox.Size = New System.Drawing.Size(100, 20)
         Me.EMAILTextBox.TabIndex = 10
-        '
-        'OBSLabel
-        '
-        OBSLabel.AutoSize = True
-        OBSLabel.Location = New System.Drawing.Point(27, 173)
-        OBSLabel.Name = "OBSLabel"
-        OBSLabel.Size = New System.Drawing.Size(32, 13)
-        OBSLabel.TabIndex = 11
-        OBSLabel.Text = "OBS:"
         '
         'OBSTextBox
         '
@@ -308,15 +319,6 @@ Partial Class Form3
         Me.OBSTextBox.Name = "OBSTextBox"
         Me.OBSTextBox.Size = New System.Drawing.Size(100, 67)
         Me.OBSTextBox.TabIndex = 12
-        '
-        'FOTOLabel
-        '
-        FOTOLabel.AutoSize = True
-        FOTOLabel.Location = New System.Drawing.Point(231, 43)
-        FOTOLabel.Name = "FOTOLabel"
-        FOTOLabel.Size = New System.Drawing.Size(39, 13)
-        FOTOLabel.TabIndex = 13
-        FOTOLabel.Text = "FOTO:"
         '
         'FOTOPictureBox
         '
@@ -337,11 +339,22 @@ Partial Class Form3
         Me.Button1.Text = "Inserir..."
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(322, 258)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(109, 13)
+        Me.LinkLabel1.TabIndex = 16
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Voltar à Página Inicial"
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(443, 280)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(MATRICULALabel)
         Me.Controls.Add(Me.MATRICULATextBox)
@@ -396,4 +409,5 @@ Partial Class Form3
     Friend WithEvents OBSTextBox As TextBox
     Friend WithEvents FOTOPictureBox As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class
